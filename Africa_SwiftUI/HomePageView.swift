@@ -15,9 +15,12 @@ struct HomePageView: View {
             VStack {
                 CoverImageView()
                     .frame(height: 250)
-                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    .padding()
+                    .cornerRadius(12)
                 List(animals) { animal in
-                    AnimalListItemView(animal: animal)
+                    NavigationLink(destination: AnimalDetailView(animal: animal)) {
+                        AnimalListItemView(animal: animal)
+                    }
                 }
             }
             .navigationBarTitle("Africa", displayMode: .large)

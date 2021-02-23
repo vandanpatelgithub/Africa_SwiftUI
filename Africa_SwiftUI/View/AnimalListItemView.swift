@@ -28,7 +28,6 @@ struct AnimalListItemView: View {
                     .font(.footnote)
                     .multilineTextAlignment(.leading)
                     .lineLimit(2)
-                    .padding(.trailing, 8)
             }
         }
     }
